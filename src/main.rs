@@ -1,7 +1,8 @@
 use yew::prelude::*;
 
 enum Msg {
-    AddOne
+    AddOne,
+    AddTwo
 }
 
 struct CounterComponent {
@@ -22,6 +23,10 @@ impl Component for CounterComponent {
             Msg::AddOne => {
                 self.count += 1;
                 true  // Re-render component 
+            },
+            Msg::AddTwo => {
+                self.count += 2;
+                true 
             }
         }
     }
@@ -31,8 +36,12 @@ impl Component for CounterComponent {
         html! {
             <div class="container">
                 <p>{self.count}</p>
+                <button class="bg-blue-500 hover:bg-blue-300 px-2 py-2 rounded"
+                onclick={link.callback(|_| Msg::AddTwo)}>{"Click me"}</button>
 
-                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
+                <button 
+                class="bg-blue-500 hover:bg-blue-300 px-2 py-2 rounded"
+                onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
             </div>
         }
     }
