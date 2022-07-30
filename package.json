@@ -1,0 +1,23 @@
+{
+  "name": "sota",
+  "version": "1.0.0",
+  "description": "SOTA - Structure Of The Atom is a web application meant to guide you through how an atom is structured, and covers some basic concepts on it.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:css": "tailwindcss -c ./tailwind.config.js -o ./tailwind.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blankRiot96/sota.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blankRiot96/sota/issues"
+  },
+  "homepage": "https://github.com/blankRiot96/sota#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.6"
+  }
+}
